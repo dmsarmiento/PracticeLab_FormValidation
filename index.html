@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class = "container">
+        
+        <div class = "container2">
+            <h1 class = "title">Create a New Event </h1>
+            <h1 class = "title2">Create a New Event </h1>
+            <br><br><br>
+            <form>
+            <table id = "table-contents" align = "center">
+                <tr>
+                    <td width = 150px>
+                        <label><b>Event Type:</label></b>
+                    </td>
+                    <td  colspan = "5">
+                        <select id = "event-type" required>
+                            <option value = "" disabled selected>Choose an event</option>
+                            <option value = "Anniversary">Anniversary</option>
+                            <option value = "Birthday">Birthday</option>
+                            <option value = "Conference">Graduation</option>
+                            <option value = "Debut">Reunion</option>
+                            <option value = "Debut">Wedding</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><b>Event Title:</label></b>
+                    </td>
+                    <td  colspan = "3">
+                        <input type = "text" size = "70" id = "event-title" maxlength = "70" placeholder = "Place your event title" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><b>Event Dates:</label></b>
+                        
+                    </td>
+                    <td>
+                        <input type = "date" id = "date-from" required>
+                    </td>
+                    <td>
+                        &nbsp; &nbsp; &nbsp; &nbsp; to  &nbsp; &nbsp; &nbsp; &nbsp;
+                    </td>
+                    <td>
+                        <input type = "date" id ="date-to" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label><b>Posting Date:</label></b>
+                    </td>
+                    <td>
+                        <input type = "date" id ="post-date" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td  colspan = "5">
+                        <br><br>
+                        <input type = "checkbox" id = "reg-required"> Is registration required?
+                    </td>
+                </tr>
+                <tr>
+                    <td  colspan = "5">
+                        <input type = "checkbox" id = "fam-prog"> Is this event associated with any family programs?
+                    </td>
+                </tr>
+                <tr>
+                    <td  colspan = "5">
+                        <input type = "checkbox" id = "email"> Upon registration completion, are users to receive an auto-generated email?
+                    </td>
+                </tr>
+                <tr>
+                    <td  colspan = "5">
+                        <input type = "checkbox" id = "contact"> Is there a point of contact?
+                    </td>
+                </tr>
+                <tr>
+                    <td  colspan = "5">
+                        <input type = "checkbox" id = "hosting"> Is there a hosting command point of contact?
+                    </td>
+                </tr>
+            </table>
+            <br><br><br><br>
+            <table class = "buttons" align = "center" width = "30%">
+                <tr>
+                    <td>
+                        <input type = "submit" value = "Save" onclick = "validate()">
+                    </td>
+                    <td>
+                        <input type = "reset" value = "Cancel" id = "reset" onclick = "cancel()">
+                    </td>
+                </tr>
+            </table>
+        </form>    
+            
+       
+        </div>
+    </div>
+        
+</body>
+</html>
